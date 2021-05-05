@@ -6,7 +6,7 @@ driver = webdriver.Chrome(r"C:\Users\Eliaz\Documents\pathDivers\chromedriver.exe
 
 driver.get('https://gamblingbot.app/games/fortune-wheel')
 
-someVariable = getpass.getpass("Press Enter after You are done logging in")
+someVariable = getpass.getpass("Press Enter after you are done logging in")
 a=False
 nbessai=0
 while a==False:
@@ -19,7 +19,7 @@ while a==False:
         if (request.response and request.url=="https://gamblingbot.app/api/games/fortune-wheel-start"):
             print(request.response.body)
             if (":0" or "12") in str(request.response.body):
-                print("VICTOIRE")
+                print("VICTORY ROYALE")
                 a=True
             else :
                 driver.refresh()
