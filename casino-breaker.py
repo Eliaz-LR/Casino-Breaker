@@ -18,7 +18,7 @@ while a==False:
     for request in driver.requests:
         if (request.response and request.url=="https://gamblingbot.app/api/games/fortune-wheel-start"):
             print(request.response.body)
-            if (":0" or "12") in str(request.response.body):
+            if ":0" in str(request.response.body):
                 print("VICTORY ROYALE")
                 a=True
             else :
