@@ -11,7 +11,6 @@ a=False
 nbessai=0
 while a==False:
     del driver.requests
-    time.sleep(1)
     wheel_button = driver.find_element_by_id('middleButton')
     wheel_button.click()
     time.sleep(1)
@@ -24,9 +23,8 @@ while a==False:
             else :
                 driver.refresh()
                 nbessai=nbessai+1
-
-    time.sleep(1)
-    
+                if nbessai % 10 == 0 :
+                    print(nbessai)
 print(nbessai)
 someVariable = getpass.getpass("Press Enter to quit")
 driver.quit()
